@@ -32,26 +32,44 @@ const Main = () => {
 
   return (
     <div className="main">
-      <p className="infoparagraph">Enter your id number to view absences</p>
-      <hr />
+      <div className="formContainer">
+        <div className="left">
+          <span className="logo">User search</span>
+          <div className="form">
+            <p className="infoparagraph">
+              Enter your id number to view absences
+            </p>
+            <input
+              className="textinput"
+              type="text"
+              value={text}
+              onChange={handleChange}
+              placeholder=""
+            />
 
-      <div className="form">
-        <input
-          className="textinput"
-          type="text"
-          value={text}
-          onChange={handleChange}
-          placeholder="Enter your id number"
-        />
+            <input
+              className="mainbutton"
+              type="button"
+              value="Search"
+              onClick={handleClick}
+            />
 
-        <input
-          className="mainbutton"
-          type="button"
-          value="Search"
-          onClick={handleClick}
-        />
+            {result}
+            {/* end of form */}
+          </div>
+          {/* end of left */}
+        </div>
+        <div className="right">
+          <span className="logo">User Info</span>
+          <p>User mail</p>
+          <p>User mail</p>
+          <p>User mail</p>
+          <p>User mail</p>
+          <p>User mail</p>
+          <p>User mail</p>
+          <p>User mail</p>
+        </div>
       </div>
-      {result}
     </div>
   );
 };

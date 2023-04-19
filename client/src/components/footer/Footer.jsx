@@ -3,8 +3,34 @@ import "./footer.scss";
 const Footer = () => {
   return (
     <div className="footer">
-      <p>App is designed for testing purposes.</p>
-      <p>It should not be used for real projects!</p>
+      <div className="fLists">
+        <ul className="flist">
+          <p>About us</p>
+          <li className="fListItem">Our school</li>
+          <li className="fListItem">Announcements</li>
+          <li className="fListItem">Contact us</li>
+          <li className="fListItem">Visit us</li>
+          <li className="fListItem">Eclass</li>
+        </ul>
+
+        <ul className="flist">
+          <p>About us</p>
+          <li className="fListItem">Our school</li>
+          <li className="fListItem">Announcements</li>
+          <li className="fListItem">Contact us</li>
+          <li className="fListItem">Visit us</li>
+          <li className="fListItem">Eclass</li>
+        </ul>
+
+        <ul className="flist">
+          <p>About us</p>
+          <li className="fListItem">Our school</li>
+          <li className="fListItem">Announcements</li>
+          <li className="fListItem">Contact us</li>
+          <li className="fListItem">Visit us</li>
+          <li className="fListItem">Eclass</li>
+        </ul>
+      </div>
     </div>
   );
 };

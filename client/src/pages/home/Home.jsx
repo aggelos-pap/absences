@@ -5,7 +5,7 @@ import Main from "../../components/main/Main";
 import Footer from "../../components/footer/Footer";
 const Home = () => {
   return (
-    <div>
+    <div className="home">
       <Navbar />
       <Main />
       <Footer />
