@@ -1,7 +1,7 @@
 import React from "react";
 import "./list.scss";
 
-const List = () => {
+const List = ({ id }) => {
   return <div>List</div>;
 };
 
