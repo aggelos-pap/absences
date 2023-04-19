@@ -2,13 +2,16 @@
   -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
   box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
   border-top: 3px solid maroon;
+  border-bottom: 3px solid maroon;
+  border-radius:5px;
 
-  width: 100%;
+  
 //   max-width: 1024px;
   min-height: 400px;
   display:flex;
 
   .formContainer {
+    width: 100%;
     display: flex;
     flex:6;
     flex-direction: row;
@@ -17,7 +20,7 @@
   }
 
   .form {
-
+    
     .infoparagraph {
       font-size: 20px;
       margin-bottom: 15px;
@@ -43,8 +46,9 @@
   }
 
   .left {
+    margin-left:10px;
     margin-top: 5px;
-    flex: 2;
+    flex: 3;
     .logo{
         // padding-bottom: 55px;
         color: maroon;
@@ -54,7 +58,7 @@
   }
   .right {
     margin-top: 5px;
-    flex: 4;
+    flex: 3;
         .logo{
         // padding-bottom: 55px;
         color: maroon;
