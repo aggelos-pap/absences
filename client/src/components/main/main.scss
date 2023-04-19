@@ -1,0 +1,42 @@
+.main{
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-bottom: 200px;
+   
+    border: 2px solid #7451f8;
+    width:50%;
+    margin-top: 50px;
+    min-height:400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap: 20px;
+    hr{
+        width: 100%;
+        color: #7451f8;
+    }
+    .form{
+        gap: 25px;
+        border: 1px solid #7451f8;
+    }
+    .infoparagraph{
+        font-size: 20px;
+    }
+    .textinput{
+        border:none;
+        margin-right: 10px;
+    }
+    .mainbutton{
+        border:none;
+        background-color: #7451f8;
+        color:white;
+        padding: 5px;
+        cursor:pointer;
+        &:hover{
+            font-weight: 900;
+        }
+    }
+}
