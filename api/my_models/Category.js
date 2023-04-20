@@ -9,7 +9,6 @@ const CategorySchema = new mongoose.Schema(
     },
     semesters: {
       type: [String],
-      required: true,
     },
   },
   {
