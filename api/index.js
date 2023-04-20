@@ -5,20 +5,18 @@ import mongoose from "mongoose";
 const app = express();
 dotenv.config();
 
-let mongourl = process.env.PORT_NUMBER;
-console.log(process.env.mongourl);
+//Google dns required to connect to db :))))
+const connect = async () => {
+  try {
+    await mongoose.connect(process.env.MONGO_URL);
+    console.log("Connected to database.");
+  } catch (err) {
+    console.log(err);
+    throw err;
+  }
+};
 
-// const connect = async () => {
-//   try {
-//     await mongoose.connect(process.env.MONGO);
-//     console.log("Connected to database.");
-//   } catch (err) {
-//     console.log(err);
-//     throw err;
-//   }
-// };
-
-// app.listen(8800, () => {
-//   connect();
-//   console.log("Connected to backend.");
-// });
+app.listen(8800, () => {
+  connect();
+  console.log("Connected to backend.");
+});
