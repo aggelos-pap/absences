@@ -4,9 +4,12 @@ import GroupIcon from "@mui/icons-material/Group";
 import CategoryIcon from "@mui/icons-material/Category";
 import PlayLessonIcon from "@mui/icons-material/PlayLesson";
 import axios from "axios";
+import useFetch from "../../hooks/useFetch";
 
 const Widget = ({ type }) => {
   //   let totalUsers = 1;
+
+  const { data, loading, error } = useFetch();
   const [totalUsers, setTotalUsers] = useState("");
   const [totalLessons, setTotalLessons] = useState("");
   const [totalCategories, setTotalCategories] = useState("");
