@@ -7,6 +7,7 @@ import {
   deleteUser,
   getUser,
   countUsers,
+  getLast24Hours,
 } from "../controllers/userController.js";
 import { verifyToken, verifyUser, verifyAdmin } from "../utils/verifyToken.js";
 
@@ -33,6 +34,8 @@ router.get("/", getUsers);
 
 //Count all users
 router.get("/cc", countUsers);
+
+router.get("/info/last24", getLast24Hours);
 
 //Get a single user
 router.get("/:id", getUser);
