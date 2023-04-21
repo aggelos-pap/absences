@@ -1,71 +1,82 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import "./widget.scss";
-import GroupIcon from '@mui/icons-material/Group';
-import CategoryIcon from '@mui/icons-material/Category';
-import PlayLessonIcon from '@mui/icons-material/PlayLesson';
+import GroupIcon from "@mui/icons-material/Group";
+import CategoryIcon from "@mui/icons-material/Category";
+import PlayLessonIcon from "@mui/icons-material/PlayLesson";
+import axios from "axios";
 
 const Widget = ({ type }) => {
+  //   let totalUsers = 1;
+  const [totalUsers, setTotalUsers] = useState("");
+  const [totalLessons, setTotalLessons] = useState("");
+  const [totalCategories, setTotalCategories] = useState("");
+  useEffect(() => {
+    axios
+      .get("http://localhost:8800/api/users/cc")
+      .then((res) => setTotalUsers(res.data.count))
+      .catch((err) => console.error(err));
 
-    let data;
+    axios
+      .get("http://localhost:8800/api/lessons/cc")
+      .then((res) => setTotalLessons(res.data.count))
+      .catch((err) => console.error(err));
 
-    let totalUsers = 321;
-    let totalLessons = 34;
-    let totalCategories = 12;
+    axios
+      .get("http://localhost:8800/api/categories/cc")
+      .then((res) => setTotalCategories(res.data.count))
+      .catch((err) => console.error(err));
+  }, []);
 
-    switch (type) {
-        case "user":
-            data = {
-                title: "USERS",
-                amount: totalUsers,
-                link:"See all users",
-                description: "Registered users",
-                icon: <GroupIcon className="icon" style={{color:"#6439ff"}}/>,
-                
-                };
-                break;
+  let data;
 
-        case "lesson":
-            data = {
-                title: "LESSONS",
-                amount: totalLessons,
-                link:"See all lessons",
-                description: "Registered lessons",
-                icon: <PlayLessonIcon className="icon" style={{color:"#6439ff"}}/>,
-               
-                };
-                break;
-        case "category":
-            data = {
-                title: "CATEGORIES",
-                amount: totalCategories,
-                link:"See all categories",
-                description: "Registered categories",
-                icon: <CategoryIcon className="icon" style={{color:"#6439ff"}}/>,
-                };
-                break;
-                default:
-                    break;
-            
+  switch (type) {
+    case "user":
+      data = {
+        title: "USERS",
+        amount: totalUsers,
+        link: "See all users",
+        description: "Registered users",
+        icon: <GroupIcon className="icon" style={{ color: "#6439ff" }} />,
+      };
 
+      break;
 
-                
-            }
+    case "lesson":
+      data = {
+        title: "LESSONS",
+        amount: totalLessons,
+        link: "See all lessons",
+        description: "Registered lessons",
+        icon: <PlayLessonIcon className="icon" style={{ color: "#6439ff" }} />,
+      };
+      break;
+    case "category":
+      data = {
+        title: "CATEGORIES",
+        amount: totalCategories,
+        link: "See all categories",
+        description: "Registered categories",
+        icon: <CategoryIcon className="icon" style={{ color: "#6439ff" }} />,
+      };
+      break;
+    default:
+      break;
+  }
   return (
     <div className="widget">
-        <div className="left">
-            <span className="title">{data.title}</span>
-            <span className="amount">{data.amount} </span>
-            <span className="link">{data.link} </span>
-        </div>
-        <div className="right">
-            <span className="description ">
-                {data.icon}
-                {data.description}
-            </span>
-        </div>
-
+      <div className="left">
+        <span className="title">{data.title}</span>
+        <span className="amount">{data.amount} </span>
+        <span className="link">{data.link} </span>
+      </div>
+      <div className="right">
+        <span className="description ">
+          {data.icon}
+          {data.description}
+        </span>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Widget
+export default Widget;
