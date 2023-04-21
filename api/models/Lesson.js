@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const LessonSchema = new mongoose.Schema(
   {
-    name: {
+    title: {
       type: String,
       required: true,
     },
@@ -11,12 +11,12 @@ const LessonSchema = new mongoose.Schema(
       ref: "Category",
       required: true,
     },
-    absences: {
-      type: Map,
-      of: Number,
-      required: true,
-      default: {},
-    },
+    // absences: {
+    //   type: Map,
+    //   of: Number,
+    //   required: true,
+    //   default: {},
+    // },
   },
   {
     timestamps: true,

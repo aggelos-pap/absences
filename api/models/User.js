@@ -33,6 +33,12 @@ const UserSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    absences: {
+      type: Map,
+      of: Number,
+      required: true,
+      default: {},
+    },
   },
   { timestamps: true }
 );

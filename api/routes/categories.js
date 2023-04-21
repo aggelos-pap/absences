@@ -15,7 +15,7 @@
 //     timestamps: true,
 //   }
 // );
-
+import { verifyAdmin, verifyUser, verifyToken } from "../utils/verifyToken.js";
 import express from "express";
 import Category from "../models/Category.js";
 import { createError } from "../utils/error.js";
@@ -31,13 +31,13 @@ const router = express.Router();
 
 //CRUD operations
 //Create a new category
-router.post("/", createCategory);
+router.post("/", verifyAdmin, createCategory);
 
 //Update a category
-router.put("/:id", updateCategory);
+router.put("/:id", verifyAdmin, updateCategory);
 
 //Delete a category
-router.delete("/:id", deleteCategory);
+router.delete("/:id", verifyAdmin, deleteCategory);
 
 //Get all categories
 router.get("/", getCategories);
