@@ -1,4 +1,5 @@
 import Category from "../models/Category.js";
+import mongoose from "mongoose";
 
 export const createCategory = async (req, res, next) => {
   const newCategory = new Category(req.body);
@@ -38,7 +39,17 @@ export const deleteCategory = async (req, res, next) => {
 export const getCategories = async (req, res, next) => {
   try {
     const categories = await Category.find();
+    // console.log(categories); // eslint-disable-line no-console
     res.status(200).json(categories);
+  } catch (err) {
+    next(err);
+  }
+};
+
+export const countCategories = async (req, res, next) => {
+  try {
+    const count = await Category.count();
+    res.status(200).json({ count });
   } catch (err) {
     next(err);
   }
@@ -52,3 +63,6 @@ export const getCategory = async (req, res, next) => {
     next(err);
   }
 };
+
+//   const countAll = await Category.find();
+// const countAll = await Category.countDocuments({}, { hint: "_id" });

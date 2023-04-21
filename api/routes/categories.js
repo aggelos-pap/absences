@@ -25,6 +25,7 @@ import {
   updateCategory,
   deleteCategory,
   getCategory,
+  countCategories,
 } from "../controllers/categoryController.js";
 
 const router = express.Router();
@@ -42,7 +43,12 @@ router.delete("/:id", verifyAdmin, deleteCategory);
 //Get all categories
 router.get("/", getCategories);
 
+//Count all categories
+router.get("/cc", countCategories);
+
 //Get a single category
 router.get("/:id", getCategory);
+
+// router.get("/cc", countCategories);
 
 export default router;

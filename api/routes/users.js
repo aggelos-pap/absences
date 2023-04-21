@@ -6,6 +6,7 @@ import {
   updateUser,
   deleteUser,
   getUser,
+  countUsers,
 } from "../controllers/userController.js";
 import { verifyToken, verifyUser, verifyAdmin } from "../utils/verifyToken.js";
 
@@ -29,6 +30,9 @@ router.delete("/:id", verifyAdmin, deleteUser);
 
 //Get all users
 router.get("/", getUsers);
+
+//Count all users
+router.get("/cc", countUsers);
 
 //Get a single user
 router.get("/:id", getUser);

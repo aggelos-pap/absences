@@ -33,6 +33,17 @@ export const getUsers = async (req, res, next) => {
   }
 };
 
+export const countUsers = async (req, res, next) => {
+  try {
+    //Why are you returning lower amount of users?
+    const count = await User.find().count();
+    console.log(User.countDocuments());
+    res.status(200).json({ count });
+  } catch (err) {
+    next(err);
+  }
+};
+
 export const getUser = async (req, res, next) => {
   try {
     const user = await User.findById(req.params.id);

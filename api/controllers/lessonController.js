@@ -3,13 +3,12 @@ import { createError } from "../utils/error.js";
 
 export const createLesson = async (req, res, next) => {
   try {
-    const { title, category, absences } = req.body;
+    const { title, category } = req.body;
 
     // create a new Lesson document with the provided data
     const lesson = new Lesson({
       title,
       category,
-      absences,
     });
 
     // save the new document to the database
@@ -73,6 +72,15 @@ export const getLessons = async (req, res, next) => {
   try {
     const lessons = await Lesson.find();
     res.status(200).json(lessons);
+  } catch (err) {
+    next(err);
+  }
+};
+
+export const countLessons = async (req, res, next) => {
+  try {
+    const count = await Lesson.count();
+    res.status(200).json({ count });
   } catch (err) {
     next(err);
   }

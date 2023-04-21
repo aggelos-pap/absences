@@ -5,6 +5,7 @@ import {
   deleteLesson,
   getLessons,
   getLesson,
+  countLessons,
 } from "../controllers/lessonController.js";
 import { verifyAdmin } from "../utils/verifyToken.js";
 
@@ -23,6 +24,9 @@ router.delete("/:id", verifyAdmin, deleteLesson);
 
 //Get all categories
 router.get("/", getLessons);
+
+//Count all lessons
+router.get("/cc", countLessons);
 
 //Get a single category
 router.get("/:id", getLesson);
