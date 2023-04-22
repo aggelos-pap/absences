@@ -9,7 +9,7 @@ export const userColumns = [
         <div className="cellWithImg">
           <img
             className="cellImg"
-            src={params.row.img || "https://i.ibb.co/MBtjqXQ/no-avatar.gif"}
+            src={params.row.photo || "https://i.ibb.co/MBtjqXQ/no-avatar.gif"}
             alt="avatar"
           />
           {params.row.username}
@@ -24,21 +24,28 @@ export const userColumns = [
   },
 
   {
-    field: "country",
-    headerName: "Country",
+    field: "isAdmin",
+    headerName: "IsAdmin",
     width: 100,
   },
   {
-    field: "city",
-    headerName: "City",
+    field: "photo",
+    headerName: "photo",
     width: 100,
   },
   {
-    field: "phone",
-    headerName: "Phone",
+    field: "name",
+    headerName: "name",
+    width: 100,
+  },
+  {
+    field: "username",
+    headerName: "username",
     width: 100,
   },
 ];
+
+export const userRows = [{}];
 
 export const hotelColumns = [
   { field: "_id", headerName: "ID", width: 250 },
