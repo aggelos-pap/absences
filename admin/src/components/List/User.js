@@ -7,39 +7,40 @@ const UserSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
+    password: {
+      type: String,
+      required: true,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
     email: {
       type: String,
       required: true,
       unique: true,
     },
-    password: {
+    photo: {
       type: String,
-      required: true,
     },
-    img: {
-      type: String,
-      required: false,
-    },
-    country: {
-      type: String,
-      required: true,
-    },
-    phone: {
-      type: String,
-      required: true,
-    },
-    numberId: {
-      type: String,
-      required: true,
-    },
+    lessons: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Lesson",
+      },
+    ],
     isAdmin: {
       type: Boolean,
       default: false,
     },
+    absences: {
+      type: Map,
+      of: Number,
+      required: true,
+      default: {},
+    },
   },
-  {
-    timestamps: true,
-  }
+  { timestamps: true }
 );
 
 export default mongoose.model("User", UserSchema);

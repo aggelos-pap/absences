@@ -67,7 +67,6 @@ const Single = () => {
           </div>
         </div>
         {/* <div className="bottom"></div> */}
-
       </div>
     </div>
   );

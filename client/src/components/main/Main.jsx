@@ -7,7 +7,8 @@ const Main = () => {
   const [text, setText] = useState("");
   const [result, setResult] = useState(null);
 
-  function handleClick() {
+  const handleClick = async (e) => {
+    e.preventDefault();
     console.log(text);
     let result = null;
     if (parseInt(text) === testingId) {
@@ -24,7 +25,7 @@ const Main = () => {
       );
     }
     return result;
-  }
+  };
 
   function handleChange(e) {
     setText(e.target.value);

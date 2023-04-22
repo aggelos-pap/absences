@@ -9,7 +9,9 @@ import useFetch from "../../hooks/useFetch";
 const Widget = ({ type }) => {
   //   let totalUsers = 1;
 
-  const { data, loading, error } = useFetch();
+  const { data, loading, error } = useFetch("/lessons/cc");
+  // console.log(data);
+
   const [totalUsers, setTotalUsers] = useState("");
   const [totalLessons, setTotalLessons] = useState("");
   const [totalCategories, setTotalCategories] = useState("");
@@ -30,11 +32,11 @@ const Widget = ({ type }) => {
       .catch((err) => console.error(err));
   }, []);
 
-  let data;
+  let dataInfo;
 
   switch (type) {
     case "user":
-      data = {
+      dataInfo = {
         title: "USERS",
         amount: totalUsers,
         link: "See all users",
@@ -45,7 +47,7 @@ const Widget = ({ type }) => {
       break;
 
     case "lesson":
-      data = {
+      dataInfo = {
         title: "LESSONS",
         amount: totalLessons,
         link: "See all lessons",
@@ -54,7 +56,7 @@ const Widget = ({ type }) => {
       };
       break;
     case "category":
-      data = {
+      dataInfo = {
         title: "CATEGORIES",
         amount: totalCategories,
         link: "See all categories",
@@ -68,9 +70,9 @@ const Widget = ({ type }) => {
   return (
     <div className="widget">
       <div className="left">
-        <span className="title">{data.title}</span>
-        <span className="amount">{data.amount} </span>
-        <span className="link">{data.link} </span>
+        <span className="title">{dataInfo.title}</span>
+        <span className="amount">{dataInfo.amount} </span>
+        <span className="link">{dataInfo.link} </span>
       </div>
       <div className="right">
         <span className="description ">
