@@ -11,6 +11,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import { Link } from "react-router-dom";
 import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
 
 // import {
 //   DashboardIcon,
@@ -23,7 +24,14 @@ import { useContext } from "react";
 //   PersonIcon,
 // } from "@mui/icons-material";
 const Sidebar = () => {
+  const handleLogout = (e) => {
+    e.preventDefault();
+    dispatchAuth({ type: "LOGOUT" });
+    window.location.reload();
+  };
+
   const { dispatch } = useContext(DarkModeContext);
+  const { dispatchAuth } = useContext(AuthContext);
   return (
     <div className="sidebar">
       <div className="top">
@@ -72,7 +80,7 @@ const Sidebar = () => {
             <PersonIcon className="icon" />
             <span>Profile</span>
           </li>
-          <li>
+          <li onClick={handleLogout}>
             <LogoutIcon className="icon" />
             <span>Logout</span>
           </li>
