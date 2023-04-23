@@ -3,25 +3,21 @@ import "./main.scss";
 import axios from "axios";
 
 const Main = () => {
-  const testingId = 323;
-
   const [text, setText] = useState("");
   const [result, setResult] = useState(null);
   const [serverdata, setServerdata] = useState([]);
+  const [displayuser, setDisplayuser] = useState(![]);
 
   useEffect(() => {
     axios
       .get("http://172.24.0.150:8800/api/users/")
       .then((res) => setServerdata(res.data));
   }, []);
-  // console.log(serverdata);
 
   const amArray = serverdata.map((item) => item.am);
-  console.log(amArray);
-
+  console.log(serverdata);
   const handleClick = async (e) => {
     e.preventDefault();
-    console.log(text);
 
     if (amArray.includes(String(parseInt(text)))) {
       setResult(
@@ -29,6 +25,14 @@ const Main = () => {
           <h1>User exists</h1>
         </>
       );
+      //Fetch mongodb user info that depends on the am
+
+      const info = serverdata;
+
+      const selectedAm = parseInt(text);
+
+      const requestedAm = serverdata.filter((item) => item.am == selectedAm);
+      setDisplayuser(requestedAm);
     } else {
       setResult(
         <>
@@ -73,27 +77,15 @@ const Main = () => {
         </div>
         <div className="right">
           <span className="logo">User Info</span>
-          <p>User mail</p>
-          <p>User mail</p>
-          <p>User mail</p>
-          <p>User mail</p>
-          <p>User mail</p>
-          <p>User mail</p>
-          <p>User mail</p>
-          <p>User mail</p>
-          <p>User mail</p>
-          <p>User mail</p>
-          <p>User mail</p>
-          <p>User mail</p>
-          <p>User mail</p>
-          <p>User mail</p>
-          <p>User mail</p>
-          <p>User mail</p>
-          <p>User mail</p>
-          <p>User mail</p>
-          <p>User mail</p>
-          <p>User mail</p>
-          <p>User mail</p>
+          {displayuser && (
+            <div className="generatedFromApi">
+              <p>Username: {displayuser[0].username}</p>
+              <p>Email: {displayuser[0].email}</p>
+              <p>Αριθμός μητρώου: {displayuser[0].am}</p>
+              <p>Ονοματεπώνυμο: {displayuser[0].name}</p>
+              <p>Created At: {displayuser[0].createdAt.toLocaleString()}</p>
+            </div>
+          )}
         </div>
       </div>
     </div>
