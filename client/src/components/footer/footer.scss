@@ -1,57 +1,87 @@
-.footer{
-    // margin-top: 500px;
-    // margin-top:auto;
-    // height: 200px;
-    width:100%;
-    width: 1024px;
-        background-color: #7451f8;
+// .footer{
 
-    .fLists{
-        width:100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: normal;
-        color:white;
-        // margin-bottom: 50px;
+//     width:100%;
+//     width: 1024px;
+//         background-color: #7451f8;
 
-            li{
-        list-style: none;
-        padding:0;
-    }
-    .fListItem{
-        margin-bottom: 10px;
-        cursor:pointer;
-    }
+//     .fLists{
+//         width:100%;
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: space-around;
+//         align-items: normal;
+//         color:white;
+       
 
-        p{
-        padding-top: 9px;
+//             li{
+//         list-style: none;
+//         padding:0;
+//     }
+//     .fListItem{
+//         margin-bottom: 10px;
+//         cursor:pointer;
+//     }
 
-        margin-bottom: 10px;
-        color:bisque;
-        font-size: 24px;
-        text-transform: uppercase;;
-    }
-    }
+//         p{
+//         padding-top: 9px;
 
-
-    // margin-top: 20px;
-    // margin-bottom: 20px;
-    // padding-top: 20px;
-    // padding-bottom: 20px;
-
-    // display: flex;
+//         margin-bottom: 10px;
+//         color:bisque;
+//         font-size: 24px;
+//         text-transform: uppercase;;
+//     }
+//     }  
     
-    // align-items: center;
-    // justify-content: space-between;
-    // color:white;
-    // // gap: 50px;
-    // padding-left: 10px;
-    // padding-right: 10px;
-
-    
+// }
 
 
-        
-    
+
+.footer {
+  width: 100%;
+//   max-width: 1024px;
+  background-color: #7451f8;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+//   justify-content: space-between;
+//   padding: 20px;
+}
+
+.fLists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.flist {
+  flex-basis: 30%;
+  margin-bottom: 20px;
+}
+
+.fListItem {
+  cursor: pointer;
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+ .pFromFooter {
+//   color: rgb(86, 51, 8);
+    color:rgb(19, 10, 195);
+  font-size: 24px;
+  margin-bottom: 10px;
+  padding-top: 9px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .flist {
+    flex-basis: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .flist {
+    flex-basis: 100%;
+  }
 }

@@ -5,7 +5,7 @@ const Footer = () => {
     <div className="footer">
       <div className="fLists">
         <ul className="flist">
-          <p>About us</p>
+          <p className="pFromFooter">About us</p>
           <li className="fListItem">Our school</li>
           <li className="fListItem">Announcements</li>
           <li className="fListItem">Contact us</li>
@@ -14,7 +14,7 @@ const Footer = () => {
         </ul>
 
         <ul className="flist">
-          <p>About us</p>
+          <p className="pFromFooter">About us</p>
           <li className="fListItem">Our school</li>
           <li className="fListItem">Announcements</li>
           <li className="fListItem">Contact us</li>
@@ -23,7 +23,7 @@ const Footer = () => {
         </ul>
 
         <ul className="flist">
-          <p>About us</p>
+          <p className="pFromFooter">About us</p>
           <li className="fListItem">Our school</li>
           <li className="fListItem">Announcements</li>
           <li className="fListItem">Contact us</li>
