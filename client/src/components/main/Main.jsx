@@ -1,30 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./main.scss";
+import axios from "axios";
 
 const Main = () => {
   const testingId = 323;
 
   const [text, setText] = useState("");
   const [result, setResult] = useState(null);
+  const [serverdata, setServerdata] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://172.24.0.150:8800/api/users/")
+      .then((res) => setServerdata(res.data));
+  }, []);
+  // console.log(serverdata);
+
+  const amArray = serverdata.map((item) => item.am);
+  console.log(amArray);
 
   const handleClick = async (e) => {
     e.preventDefault();
     console.log(text);
-    let result = null;
-    if (parseInt(text) === testingId) {
+
+    if (amArray.includes(String(parseInt(text)))) {
       setResult(
         <>
-          <h1>Access granted</h1>
+          <h1>User exists</h1>
         </>
       );
     } else {
       setResult(
         <>
-          <h1>Access denied</h1>
+          <h1>Wrong user am</h1>
         </>
       );
     }
-    return result;
   };
 
   function handleChange(e) {
