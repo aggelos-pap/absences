@@ -5,6 +5,7 @@ import CategoryIcon from "@mui/icons-material/Category";
 import PlayLessonIcon from "@mui/icons-material/PlayLesson";
 import axios from "axios";
 import useFetch from "../../hooks/useFetch";
+import { Link } from "react-router-dom";
 
 const Widget = ({ type }) => {
   //   let totalUsers = 1;
@@ -39,7 +40,7 @@ const Widget = ({ type }) => {
       dataInfo = {
         title: "USERS",
         amount: totalUsers,
-        link: "See all users",
+        link: <Link to="/users">See all users</Link>,
         description: "Registered users",
         icon: <GroupIcon className="icon" style={{ color: "#6439ff" }} />,
       };
@@ -50,7 +51,7 @@ const Widget = ({ type }) => {
       dataInfo = {
         title: "LESSONS",
         amount: totalLessons,
-        link: "See all lessons",
+        link: <Link to="/lessons">See all lessons</Link>,
         description: "Registered lessons",
         icon: <PlayLessonIcon className="icon" style={{ color: "#6439ff" }} />,
       };
@@ -59,7 +60,7 @@ const Widget = ({ type }) => {
       dataInfo = {
         title: "CATEGORIES",
         amount: totalCategories,
-        link: "See all categories",
+        link: <Link to="/categories">See all categories</Link>,
         description: "Registered categories",
         icon: <CategoryIcon className="icon" style={{ color: "#6439ff" }} />,
       };

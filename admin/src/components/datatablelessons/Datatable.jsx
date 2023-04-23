@@ -10,51 +10,30 @@ const Datatable = () => {
 
   useEffect(() => {
     axios
-      .get("http://172.24.0.150:8800/api/users/")
+      .get("http://172.24.0.150:8800/api/lessons/")
       .then((res) => setUsers(res.data));
   }, []);
 
   const columns = [
-    { field: "name", headerName: "Full Name", width: 90 },
+    { field: "id", headerName: "Lesson id", width: 300 },
     {
-      field: "username",
-      headerName: "Username",
-      width: 150,
-      editable: false,
-    },
-    {
-      field: "email",
-      headerName: "Email",
+      field: "title",
+      headerName: "Lesson title",
       width: 300,
       editable: false,
     },
     {
-      field: "am",
-      headerName: "Αριθμός μητρώου",
-      width: 160,
-    },
-    {
-      field: "Lessons",
-      headerName: "Lessons",
-      width: 110,
-      editable: true,
-    },
-    {
-      field: "isAdmin",
-      headerName: "Admin",
-      width: 160,
+      field: "category",
+      headerName: "Lesson's category object",
+      width: 300,
+      editable: false,
     },
   ];
 
   const rows = users.map((user) => {
     return {
       id: user._id,
-      name: user.name,
-      username: user.username,
-      email: user.email,
-      lessons: user.lessons.length,
-      isAdmin: user.isAdmin,
-      am: user.am,
+      title: user.title,
     };
   });
 

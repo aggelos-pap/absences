@@ -1,6 +1,8 @@
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import List from "./pages/list/List";
+import Listcat from "./pages/listcat/Listcat";
+import Listless from "./pages/listless/Listcat";
 import New from "./pages/new/New";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Single from "./pages/single/Single";
@@ -73,7 +75,7 @@ function App() {
                 index
                 element={
                   <ProtectedRoute>
-                    <List />
+                    <Listcat />
                   </ProtectedRoute>
                 }
               />
@@ -100,7 +102,7 @@ function App() {
                 index
                 element={
                   <ProtectedRoute>
-                    <List />
+                    <Listless />
                   </ProtectedRoute>
                 }
               />

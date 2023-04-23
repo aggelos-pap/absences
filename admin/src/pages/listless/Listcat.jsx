@@ -1,10 +1,10 @@
 import React from "react";
-import "./list.scss";
+import "./listcat.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
-import Datatable from "../../components/datatable/Datatable";
-//asd
-const List = () => {
+import Datatablelessons from "../../components/datatablelessons/Datatable";
+
+const Login = () => {
   return (
     <div className="list">
       <Sidebar />
@@ -16,10 +16,10 @@ const List = () => {
           <button className="Edit">Edit user</button>
           <button className="Delete">Delete user</button>
         </div>
-        <Datatable />
+        <Datatablelessons />
       </div>
     </div>
   );
 };
 
-export default List;
+export default Login;

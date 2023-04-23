@@ -5,3 +5,43 @@
         flex:6;
     }
 }
+
+.listContainer{
+    .buttonContainer{
+
+        margin-top:15px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        .Add{
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 5px;
+            cursor:pointer;
+            background-color: white;
+            color: darkolivegreen;
+            border: 1px solid darkolivegreen;
+        }
+                .Edit{
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 5px;
+            cursor:pointer;
+            background-color: white;
+            color: darkcyan;
+            border: 1px solid darkcyan;
+        }
+
+                .Delete{
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 5px;
+            cursor:pointer;
+            background-color: white;
+            color: red;
+            border: 1px solid red;
+        }
+    }
+    
+}
