@@ -10,7 +10,7 @@ const Datatable = () => {
 
   useEffect(() => {
     axios
-      .get("http://172.24.0.150:8800/api/categories/")
+      .get("http://localhost:8800/api/categories/")
       .then((res) => setCategories(res.data));
   }, []);
   // console.log(categories);

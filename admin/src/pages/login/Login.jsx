@@ -21,7 +21,7 @@ const Login = () => {
     dispatchAuth({ type: "LOGIN_START" });
     try {
       const res = await axios.post(
-        "http://172.24.0.150:8800/api/auth/login",
+        "http://localhost:8800/api/auth/login",
         credentials
       );
       if (res.data.isAdmin) {

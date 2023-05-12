@@ -18,7 +18,7 @@ const Adduser = () => {
     const newUser = { username, password, name, email };
 
     axios
-      .post("http://172.24.0.150:8800/api/users/", newUser)
+      .post("http://localhost:8800/api/users/", newUser)
       .then((res) => console.log(res.data))
       .catch((error) => console.log(error));
 

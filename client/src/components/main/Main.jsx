@@ -10,7 +10,7 @@ const Main = () => {
 
   useEffect(() => {
     axios
-      .get("http://172.24.0.150:8800/api/users/")
+      .get("http://localhost:8800/api/users/")
       .then((res) => setServerdata(res.data));
   }, []);
 
