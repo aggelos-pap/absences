@@ -13,7 +13,6 @@ const Datatable = () => {
       .get("http://localhost:8800/api/categories/")
       .then((res) => setCategories(res.data));
   }, []);
-  // console.log(categories);
 
   const columns = [
     { field: "id", headerName: "Category id", width: 300 },
@@ -30,14 +29,6 @@ const Datatable = () => {
       headerName: "Lessons per semester",
       width: 160,
     },
-    // {
-    //   field: "lessonsPerSemester",
-    //   headerName: "Lessons per semester",
-    //   width: 300,
-    //   valueGetter: (params) => {
-    //     return params.getValue(params.lessonsPerSemester);
-    //   },
-    // },
   ];
 
   const categoriesMapped = categories.map((category) => {
@@ -49,20 +40,12 @@ const Datatable = () => {
     };
   });
 
-  // categoriesMapped.forEach((obj) => {
-  //   console.log(obj.lessonsPerSemester);
-  // });
-
   for (let i = 0; i < categoriesMapped.lessonsPerSemester; i++) {
     const obj = categoriesMapped[i];
     for (const key in obj) {
       console.log(`${key}: ${obj[key]}`);
     }
   }
-
-  // for (let key in categoriesMapped) {
-  //   console.log(key + categoriesMapped[key]);
-  // }
 
   return (
     <Box className="datatable" sx={{ height: 700, width: "100%" }}>

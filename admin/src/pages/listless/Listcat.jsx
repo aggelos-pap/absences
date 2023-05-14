@@ -12,9 +12,9 @@ const Login = () => {
       <div className="listContainer">
         <Navbar />
         <div className="buttonContainer">
-          <button className="Add">Add user</button>
-          <button className="Edit">Edit user</button>
-          <button className="Delete">Delete user</button>
+          <button className="Add">Add lesson</button>
+          <button className="Edit">Edit lesson</button>
+          <button className="Delete">Delete lesson</button>
         </div>
         <Datatablelessons />
       </div>

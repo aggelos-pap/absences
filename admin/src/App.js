@@ -4,6 +4,7 @@ import List from "./pages/list/List";
 import Listcat from "./pages/listcat/Listcat";
 import Listless from "./pages/listless/Listcat";
 import New from "./pages/new/New";
+import adduser from "./pages/adduser/Adduser";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Single from "./pages/single/Single";
 import "./style/dark.scss";
@@ -13,6 +14,7 @@ import { userInputs, categoryInputs, lessonInputs } from "./formSource";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
 import { AuthContext } from "./context/AuthContext";
+import Adduser from "./pages/adduser/Adduser";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -62,6 +64,16 @@ function App() {
                   </ProtectedRoute>
                 }
               />
+
+              <Route
+                path="adduser"
+                element={
+                  <ProtectedRoute>
+                    <Adduser />
+                  </ProtectedRoute>
+                }
+              />
+
               <Route
                 path="new"
                 element={
