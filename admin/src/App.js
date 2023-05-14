@@ -15,6 +15,7 @@ import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
 import { AuthContext } from "./context/AuthContext";
 import Adduser from "./pages/adduser/Adduser";
+import Edituser from "./pages/edituser/Edituser";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -70,6 +71,14 @@ function App() {
                 element={
                   <ProtectedRoute>
                     <Adduser />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="edituser"
+                element={
+                  <ProtectedRoute>
+                    <Edituser />
                   </ProtectedRoute>
                 }
               />

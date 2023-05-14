@@ -24,7 +24,7 @@ const router = express.Router();
 // });
 
 //Update a user
-router.put("/:id", verifyAdmin, updateUser);
+router.put("/:id", updateUser);
 
 //Delete a user if isAdmin:true
 router.delete("/:id", verifyAdmin, deleteUser);
