@@ -18,6 +18,10 @@ const List = () => {
     navigate("/users/edituser");
   };
 
+  const handledeleteuser = () => {
+    navigate("/users/deleteuser");
+  };
+
   return (
     <div className="list">
       <Sidebar />
@@ -31,7 +35,9 @@ const List = () => {
           <button className="Edit" onClick={handleeditUser}>
             Edit user
           </button>
-          <button className="Delete">Delete user</button>
+          <button className="Delete" onClick={handledeleteuser}>
+            Delete user
+          </button>
         </div>
         <Datatable />
       </div>

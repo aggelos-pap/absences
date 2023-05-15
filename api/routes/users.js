@@ -27,7 +27,7 @@ const router = express.Router();
 router.put("/:id", updateUser);
 
 //Delete a user if isAdmin:true
-router.delete("/:id", verifyAdmin, deleteUser);
+router.delete("/:id", deleteUser);
 
 //Get all users
 router.get("/", getUsers);
