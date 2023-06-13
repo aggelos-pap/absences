@@ -18,6 +18,7 @@ import Adduser from "./pages/adduser/Adduser";
 import Edituser from "./pages/edituser/Edituser";
 import DeleteUser from "./pages/deleteuser/Deleteuser";
 import NewCategory from "./pages/newcategory/NewCategory";
+import EditCategory from "./pages/editcategory/EditCategory";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -126,6 +127,14 @@ function App() {
                 element={
                   <ProtectedRoute>
                     <NewCategory />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="editcategory"
+                element={
+                  <ProtectedRoute>
+                    <EditCategory />
                   </ProtectedRoute>
                 }
               />
