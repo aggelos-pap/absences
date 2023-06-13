@@ -17,6 +17,7 @@ import { AuthContext } from "./context/AuthContext";
 import Adduser from "./pages/adduser/Adduser";
 import Edituser from "./pages/edituser/Edituser";
 import DeleteUser from "./pages/deleteuser/Deleteuser";
+import NewCategory from "./pages/newcategory/NewCategory";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -117,6 +118,14 @@ function App() {
                 element={
                   <ProtectedRoute>
                     <Single />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="addcategory"
+                element={
+                  <ProtectedRoute>
+                    <NewCategory />
                   </ProtectedRoute>
                 }
               />

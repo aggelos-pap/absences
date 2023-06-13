@@ -32,13 +32,15 @@ const router = express.Router();
 
 //CRUD operations
 //Create a new category
-router.post("/", verifyAdmin, createCategory);
+//Add later veryifyAdmin router.post("/", verifyAdmin, createCategory);
+//Sta post /, put /:id delete /:id
+router.post("/", createCategory);
 
 //Update a category
-router.put("/:id", verifyAdmin, updateCategory);
+router.put("/:id", updateCategory);
 
 //Delete a category
-router.delete("/:id", verifyAdmin, deleteCategory);
+router.delete("/:id", deleteCategory);
 
 //Get all categories
 router.get("/", getCategories);
