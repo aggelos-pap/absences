@@ -14,13 +14,14 @@ const router = express.Router();
 // router.get("/", (req, res) => {
 //   res.send("Hello from auth");
 // });
+//Again add verifyAdmin
+//router.post("/", verifyAdmin, createLesson);
+//Sto post / put /:id delete /:id
+router.post("/", createLesson);
 
-// router.post("/:hotelid", verifyAdmin, createRoom);
-router.post("/", verifyAdmin, createLesson);
+router.put("/:id", updateLesson);
 
-router.put("/:id", verifyAdmin, updateLesson);
-
-router.delete("/:id", verifyAdmin, deleteLesson);
+router.delete("/:id", deleteLesson);
 
 //Get all categories
 router.get("/", getLessons);

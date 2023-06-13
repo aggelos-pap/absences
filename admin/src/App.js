@@ -20,6 +20,9 @@ import DeleteUser from "./pages/deleteuser/Deleteuser";
 import NewCategory from "./pages/newcategory/NewCategory";
 import EditCategory from "./pages/editcategory/EditCategory";
 import DeleteCategory from "./pages/deletecategory/DeleteCategory";
+import Addlesson from "./pages/addlesson/AddLesson";
+import Editlesson from "./pages/editlesson/EditLesson";
+import Deletelesson from "./pages/deletelesson/DeleteLesson";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -172,6 +175,32 @@ function App() {
                 element={
                   <ProtectedRoute>
                     <Single />
+                  </ProtectedRoute>
+                }
+              />
+
+              <Route
+                path="addlesson"
+                element={
+                  <ProtectedRoute>
+                    <Addlesson />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="editlesson"
+                element={
+                  <ProtectedRoute>
+                    <Editlesson />
+                  </ProtectedRoute>
+                }
+              />
+
+              <Route
+                path="deletelesson"
+                element={
+                  <ProtectedRoute>
+                    <Deletelesson />
                   </ProtectedRoute>
                 }
               />

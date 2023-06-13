@@ -18,9 +18,22 @@
 
             .right{
                 flex:2;
+                //   Button color not working fix
+                                  button{
+                    width: 150px;
+                    padding: 10px;
+                    border: none;
+                    background-color: red;
+                    color: white;    
+                    font-weight: bold;
+                    cursor:pointer;
+                    margin-top: 10px;
+                }
 
                 .formInput{
                     width: 40%;
+
+  
 
                     label{
                         display: flex;
@@ -34,20 +47,16 @@
                         border: none;
                         border-bottom: 1px solid gray;
                     }
+
+                                                   
                 }
 
-                button{
-                    width: 150px;
-                    padding: 10px;
-                    border: none;
-                    background-color: red;
-                    color: white;    
-                    font-weight: bold;
-                    cursor:pointer;
-                    margin-top: 10px;
-                }
+ 
             }
         }
+                   
 
     }
+
 }
+         

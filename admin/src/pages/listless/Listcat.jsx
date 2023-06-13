@@ -3,8 +3,23 @@ import "./listcat.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import Datatablelessons from "../../components/datatablelessons/Datatable";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
+
+  const handleAddLesson = () => {
+    navigate("/lessons/addlesson");
+  };
+
+  const handleeditLesson = () => {
+    navigate("/lessons/editlesson");
+  };
+
+  const handledeletelesson = () => {
+    navigate("/lessons/deletelesson");
+  };
+
   return (
     <div className="list">
       <Sidebar />
@@ -12,9 +27,15 @@ const Login = () => {
       <div className="listContainer">
         <Navbar />
         <div className="buttonContainer">
-          <button className="Add">Add lesson</button>
-          <button className="Edit">Edit lesson</button>
-          <button className="Delete">Delete lesson</button>
+          <button className="Add" onClick={handleAddLesson}>
+            Add lesson
+          </button>
+          <button className="Edit" onClick={handleeditLesson}>
+            Edit lesson
+          </button>
+          <button className="Delete" onClick={handledeletelesson}>
+            Delete lesson
+          </button>
         </div>
         <Datatablelessons />
       </div>

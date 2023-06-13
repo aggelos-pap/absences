@@ -1,0 +1,47 @@
+// deleteLesson.scss
+
+.deleteLesson {
+  display: flex;
+
+  .deleteLessonContainer {
+    flex: 9;
+
+    .deleteLessonContent {
+      padding: 20px;
+
+      form {
+
+        button {
+          padding: 10px;
+          border: none;
+          border-radius: 5px;
+          background: #007bff;
+          color: #fff;
+          cursor: pointer;
+          transition: background 0.2s;
+
+          &:hover {
+            background: #0056b3;
+          }
+        }
+        .formSelect {
+          margin-bottom: 10px;
+
+          label {
+            display: block;
+            margin-bottom: 5px;
+          }
+
+          select {
+            width: 100%;
+            height: 30px;
+            padding: 5px;
+          }
+
+             
+          
+        }
+      }
+    }
+  }
+}
