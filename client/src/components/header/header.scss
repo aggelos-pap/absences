@@ -1,0 +1,14 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; // You can adjust the height based on your requirements.
+  background-color: #f9f9f9; // Adjust the background color as needed.
+}
+
+.header-text {
+  font-size: 24px;
+  background: linear-gradient(45deg, red, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,59 +1,20 @@
-// .footer{
-
-//     width:100%;
-//     width: 1024px;
-//         background-color: #7451f8;
-
-//     .fLists{
-//         width:100%;
-//         display: flex;
-//         flex-direction: row;
-//         justify-content: space-around;
-//         align-items: normal;
-//         color:white;
-       
-
-//             li{
-//         list-style: none;
-//         padding:0;
-//     }
-//     .fListItem{
-//         margin-bottom: 10px;
-//         cursor:pointer;
-//     }
-
-//         p{
-//         padding-top: 9px;
-
-//         margin-bottom: 10px;
-//         color:bisque;
-//         font-size: 24px;
-//         text-transform: uppercase;;
-//     }
-//     }  
-    
-// }
-
-
-
 .footer {
-    position: absolute;
+  position: absolute;
   bottom: 0;
   width: 100%;
-//   max-width: 1024px;
   background-color: #7451f8;
   color: white;
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
-//   justify-content: space-between;
-//   padding: 20px;
+  padding: 20px;
 }
 
 .fLists {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .flist {
@@ -67,9 +28,8 @@
   list-style: none;
 }
 
- .pFromFooter {
-//   color: rgb(86, 51, 8);
-    color:rgb(19, 10, 195);
+.pFromFooter {
+  color:rgb(19, 10, 195);
   font-size: 24px;
   margin-bottom: 10px;
   padding-top: 9px;
@@ -78,7 +38,7 @@
 
 @media (max-width: 768px) {
   .flist {
-    flex-basis: 45%;
+    flex-basis: 50%;
   }
 }
 

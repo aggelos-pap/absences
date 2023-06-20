@@ -1,31 +1,3 @@
-// Old model
-
-// import mongoose from "mongoose";
-
-// const CategorySchema = new mongoose.Schema(
-//   {
-//     name: {
-//       type: String,
-//       required: true,
-//     },
-//     semesters: {
-//       type: [String],
-//       required: true,
-//     },
-//     amountOfLessons: {
-//       type: Number,
-//       required: true,
-//     },
-//   },
-//   {
-//     timestamps: true,
-//   }
-// );
-
-// // export default mongoose.model("Category", CategorySchema);
-// export default mongoose.models.Category ||
-//   mongoose.model("Category", CategorySchema);
-
 import mongoose from "mongoose";
 
 const CategorySchema = new mongoose.Schema(
