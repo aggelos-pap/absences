@@ -1,0 +1,6 @@
+//Use your jwt key here.
+JWT = 
+//Use your port number here.
+PORT_NUMBER = 
+//Use your mongo database url here.
+MONGO_URL =
