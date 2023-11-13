@@ -9,8 +9,8 @@ This is a content management system. It consists of:
 ## Getting Started
 
 If you wish to run the project at the root of the folder api you should create a .env file with a variable named MONGODB_URL that contains your mongodb username, password and connecting URI.
-A variable with the name PORT_NUMBER = <Your Port Number>.
-JWT variable with your jwt secret.
+A variable with the name PORT_NUMBER = [Your port number].
+A variable named JWT= [Your secret] with your jwt secret.
 
 Afterwards run the following command:
 
