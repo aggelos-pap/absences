@@ -15,14 +15,6 @@ const router = express.Router();
 
 //CRUD operations
 
-// router.get("/checkauthentication", verifyToken, (req, res, next) => {
-//   res.send("Hello user you are logged in ");
-// });
-
-// router.get("/checkuser/:id", verifyUser, (req, res, next) => {
-//   res.send("Hello user you are logged in and can delete your acc ");
-// });
-
 //Update a user
 router.put("/:id", updateUser);
 

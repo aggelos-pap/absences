@@ -1,5 +1,3 @@
-// Works
-
 import React, { useState } from "react";
 import "./adduser.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
@@ -33,7 +31,6 @@ const AddUser = () => {
         ...formData,
       };
 
-      // Add the user photo if a file is selected
       if (file) {
         const formDataWithFile = new FormData();
         formDataWithFile.append("photo", file);
@@ -51,9 +48,6 @@ const AddUser = () => {
       } else {
         await axios.post("http://localhost:8800/api/auth/register", newUser);
       }
-
-      // Redirect or perform any other necessary action after successful user creation
-      // ...
     } catch (error) {
       console.error("Error creating user:", error);
     }

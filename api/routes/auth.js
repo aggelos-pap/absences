@@ -4,7 +4,7 @@ import { login } from "../controllers/authController.js";
 import { verifyAdmin } from "../utils/verifyToken.js";
 const router = express.Router();
 
-//verifyAdmin when w finish
+//verifyAdmin when  finished
 router.post("/register", register);
 router.post("/login", login);
 

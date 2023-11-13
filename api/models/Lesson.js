@@ -11,12 +11,6 @@ const LessonSchema = new mongoose.Schema(
       ref: "Category",
       required: true,
     },
-    // absences: {
-    //   type: Map,
-    //   of: Number,
-    //   required: true,
-    //   default: {},
-    // },
   },
   {
     timestamps: true,

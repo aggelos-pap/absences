@@ -11,12 +11,6 @@ import { verifyAdmin } from "../utils/verifyToken.js";
 
 const router = express.Router();
 
-// router.get("/", (req, res) => {
-//   res.send("Hello from auth");
-// });
-//Again add verifyAdmin
-//router.post("/", verifyAdmin, createLesson);
-//Sto post / put /:id delete /:id
 router.post("/", createLesson);
 
 router.put("/:id", updateLesson);

@@ -13,16 +13,7 @@ import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 
-// import {
-//   DashboardIcon,
-//   GroupIcon,
-//   CategoryIcon,
-//   PlayLessonIcon,
-//   InsightsIcon,
-//   TuneIcon,
-//   LogoutIcon,
-//   PersonIcon,
-// } from "@mui/icons-material";
+
 const Sidebar = () => {
   const handleLogout = (e) => {
     e.preventDefault();

@@ -8,10 +8,9 @@ import useFetch from "../../hooks/useFetch";
 import { Link } from "react-router-dom";
 
 const Widget = ({ type }) => {
-  //   let totalUsers = 1;
+
 
   const { data, loading, error } = useFetch("/lessons/cc");
-  // console.log(data);
 
   const [totalUsers, setTotalUsers] = useState("");
   const [totalLessons, setTotalLessons] = useState("");

@@ -70,45 +70,7 @@ const List = () => {
       });
   }, []);
 
-  // console.log(info);
 
-  // const userRowsFun = [...info];
-  // console.log(userRowsFun);
-
-  // const userRowsObject = info.map((user) => ({
-  //   name: user.name,
-  //   username: user.username,
-  //   email: user.email,
-  // }));
-  // console.log(userRowsObject);
-
-  // const userRows = [
-  //   {
-  //     name: userRowsObject[0].name,
-  //     username: userRowsObject[0].username,
-  //     email: userRowsObject[0].email,
-  //   },
-  //   {
-  //     name: userRowsObject[1].name,
-  //     username: userRowsObject[1].username,
-  //     email: userRowsObject[1].email,
-  //   },
-  //   {
-  //     name: userRowsObject[2].name,
-  //     username: userRowsObject[2].username,
-  //     email: userRowsObject[2].email,
-  //   },
-  //   {
-  //     name: userRowsObject[3].name,
-  //     username: userRowsObject[3].username,
-  //     email: userRowsObject[3].email,
-  //   },
-  //   {
-  //     name: userRowsObject[4].name,
-  //     username: userRowsObject[4].username,
-  //     email: userRowsObject[4].email,
-  //   },
-  // ];
 
   return (
     <TableContainer component={Paper} className="list">

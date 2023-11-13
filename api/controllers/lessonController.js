@@ -5,13 +5,11 @@ export const createLesson = async (req, res, next) => {
   try {
     const { title, category } = req.body;
 
-    // create a new Lesson document with the provided data
     const lesson = new Lesson({
       title,
       category,
     });
 
-    // save the new document to the database
     await lesson.save();
 
     res.status(201).json(lesson);
@@ -25,7 +23,6 @@ export const updateLesson = async (req, res, next) => {
     const { id } = req.params;
     const { title, category } = req.body;
 
-    // find the existing lesson document by ID
     const lesson = await Lesson.findById(id);
 
     if (!lesson) {
@@ -34,11 +31,9 @@ export const updateLesson = async (req, res, next) => {
         .json({ success: false, error: "Lesson not found" });
     }
 
-    // update the lesson document with the provided data
     lesson.title = title || lesson.title;
     lesson.category = category || lesson.category;
 
-    // save the updated document to the database
     await lesson.save();
 
     res.status(201).json(lesson);
@@ -51,7 +46,6 @@ export const deleteLesson = async (req, res, next) => {
   try {
     const { id } = req.params;
 
-    // find the existing lesson document by ID
     const lesson = await Lesson.findById(id);
 
     if (!lesson) {

@@ -8,8 +8,6 @@ import adduser from "./pages/adduser/Adduser";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Single from "./pages/single/Single";
 import "./style/dark.scss";
-// import NewLesson from "./pages/newLesson/NewLesson";
-// import NewCategory from "./pages/newCategory/NewCategory";
 import { userInputs, categoryInputs, lessonInputs } from "./formSource";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
